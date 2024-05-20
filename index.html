@@ -15,20 +15,31 @@
   <body>
     <div class="weather-app">
       <header>
-        <form>
-          <input type="search" placeholder="Enter a city.." required />
-          <input type="submit" value="search" />
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="search" class="search-form-button" />
         </form>
       </header>
       <main>
-        <div>
-          <h1>Tehran</h1>
-          <p>
-            Saturday 13:10, Fair/wind <br />
-            Humidity: 16%, Wind: 48 km/h
-          </p>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city">Tehran</h1>
+            <p class="weather-app-info">
+              Saturday 13:10, Fair/wind <br />
+              Humidity: <strong>16%</strong>, Wind: <strong>48 km/h</strong>
+            </p>
+          </div>
+          <div class="weather-app-temperature-container">
+            <div class="weather-app-icon">🌥️</div>
+            <div class="weather-app-temperature">22</div>
+            <div class="weather-app-unit">°C</div>
+          </div>
         </div>
-        <div>🌥️ 22 °C</div>
       </main>
       <footer>
         This project was coded by
@@ -41,7 +52,7 @@
         >
         and
         <a href="https://meteorology-sigma.vercel.app/" target="_blank"
-          >hosted onVercel</a
+          >hosted on Vercel</a
         >
       </footer>
     </div>
