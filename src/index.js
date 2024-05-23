@@ -53,6 +53,31 @@ function handleSearch(event) {
   searchCity(searchedCityName.value);
 }
 
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "sat"];
+  let forecastHtml = "";
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+  <div class="weather-forecast-days">
+    <div class="weather-forecast-date">${day}</div>
+    <div class="weather-forecast-icon">🌤️</div>
+    <div class="weather-forecast-temperatures">
+      <div class="weather-forecast-temperature">
+        <strong>24°</strong>
+      </div>
+      <div class="weather-forecast-temperature">18°</div>
+    </div>
+  </div>
+`;
+  });
+  let forecast = document.querySelector("#forecast");
+  forecast.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearch);
 searchCity("Tehran");
+
+displayForecast();
